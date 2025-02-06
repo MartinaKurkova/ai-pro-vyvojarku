@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+canvas {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 30px rgba(82, 179, 255, 0.3);
+    border-radius: 15px;
+    animation: canvasGlow 2s infinite;
+}
+
+#menu {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(82, 179, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#menu h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #ff6b6b, #5f27cd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+    animation: titlePulse 2s infinite;
+}
+
+#singlePlayerButton, #multiPlayerButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #ff6b6b, #5f27cd);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 15px auto;
+    display: block;
+    width: 250px;
+    color: white;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(95, 39, 205, 0.3);
+}
+
+#singlePlayerButton:hover, #multiPlayerButton:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(95, 39, 205, 0.4);
+}
+
+#menu p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(82, 179, 255, 0.5);
+}
+
+#menu p:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+@keyframes canvasGlow {
+    0% { box-shadow: 0 0 10px rgba(82, 179, 255, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(82, 179, 255, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(82, 179, 255, 0.3); }
+}
+
+@keyframes titlePulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
